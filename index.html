@@ -1,0 +1,54 @@
+/* ============================================================
+   UTILS.JS — Funções utilitárias usadas em todo o projeto
+   ============================================================ */
+
+// Gera URL de avatar com iniciais
+function avt(name) {
+  if (!name) return 'https://ui-avatars.com/api/?name=?&background=1e2d3d&color=ff4655&size=80';
+  return 'https://ui-avatars.com/api/?name=' + encodeURIComponent(name) + '&background=1e2d3d&color=ff4655&size=80';
+}
+
+// Chave única para par de usuários no chat
+function chatKey(a, b) {
+  return [a, b].sort().join('|');
+}
+
+// Exibe toast de notificação
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function () { t.classList.remove('show'); }, 2200);
+}
+
+// Abre modal pelo ID
+function openModal(id) {
+  document.getElementById(id).classList.add('show');
+}
+
+// Fecha modal pelo ID
+function closeModal(id) {
+  document.getElementById(id).classList.remove('show');
+}
+
+// Fecha modal ao clicar no fundo
+function bgClose(e, id) {
+  if (e.target.id === id) closeModal(id);
+}
+
+// Formata hora atual como HH:MM
+function nowTime() {
+  var d = new Date();
+  return d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
+}
+
+// Fecha dropdowns e menus ao clicar fora
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.sbar')) {
+    var drop = document.getElementById('searchDrop');
+    if (drop) drop.classList.remove('show');
+  }
+  if (!e.target.closest('.popt-wrap')) {
+    document.querySelectorAll('.pmenu').forEach(function (m) { m.classList.remove('show'); });
+  }
+});

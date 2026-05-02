@@ -1,0 +1,23 @@
+.profbanner { height: 120px; background: linear-gradient(135deg,#1a0a0f,#0f1923,#1a0a0f); border-radius: 14px 14px 0 0; position: relative; margin-bottom: 50px; }
+.profavtw { position: absolute; bottom: -40px; left: 20px; }
+.profavtw img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--red); object-fit: cover; }
+.profinfo { padding: 0 20px 16px; }
+.profname   { font-size: 1.1rem; font-weight: 800; }
+.profhandle { font-size: .82rem; color: var(--muted); }
+.profbio    { font-size: .85rem; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.profstats  { display: flex; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 12px 0; }
+.profstat   { flex: 1; text-align: center; padding: 12px 0; }
+.profstat-n { font-size: 1.1rem; font-weight: 800; }
+.profstat-l { font-size: .72rem; color: var(--muted); }
+.profbadge  { display: inline-flex; align-items: center; gap: 5px; background: rgba(245,197,24,.1); border: 1px solid rgba(245,197,24,.25); color: var(--gold); padding: 3px 10px; border-radius: 12px; font-size: .75rem; font-weight: 700; margin-top: 6px; }
+.profmapbadge { background: rgba(79,195,247,.1); border-color: rgba(79,195,247,.25); color: var(--blue); }
+.strow { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.stlbl { font-size: .83rem; color: var(--muted); }
+.stval { font-size: .85rem; font-weight: 700; color: var(--red); }
+.fav-slots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fav-slot  { background: var(--darker); border: 2px dashed var(--border); border-radius: 12px; padding: 14px; text-align: center; cursor: pointer; transition: .2s; }
+.fav-slot:hover { border-color: var(--red); }
+.fav-slot.filled { border-style: solid; border-color: var(--border); }
+.fav-slot-emoji { font-size: 1.8rem; margin-bottom: 4px; }
+.fav-slot-name  { font-size: .78rem; color: var(--muted); }
+.fav-slot-plus  { font-size: 1.5rem; color: var(--muted); margin-bottom: 4px; }
